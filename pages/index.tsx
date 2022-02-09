@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <main className="p-4 bg-gray-50 min-h-screen">
+    <main className="min-h-screen bg-gray-50 p-4">
       <InstantSearch
         onSearchStateChange={updateQueryParams}
         searchClient={searchClient}
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         <Configure hitsPerPage={4} />
         <div className="grid grid-cols-4 gap-4">
           <div className="col-span-3">
-            <div className="flex items-center justify-between mb-4">
+            <div className="mb-4 flex items-center justify-between">
               <h2>検索結果</h2>
               <div>
                 <CustomSortBy
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <CustomHits />
-            <div className="flex items-center space-x-4 mt-6">
+            <div className="mt-6 flex items-center space-x-4">
               <CustomHitsPerPage
                 items={[
                   {
@@ -110,7 +110,7 @@ const Home: NextPage = () => {
           <div className="space-y-4">
             <CustomSearchBox defaultRefinement={router.query.q as string} />
             <div>
-              <h2 className="block text-sm font-medium text-gray-900 mb-4">
+              <h2 className="mb-4 block text-sm font-medium text-gray-900">
                 性別
               </h2>
               <CustomRefinementList
