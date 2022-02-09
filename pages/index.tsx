@@ -20,7 +20,6 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   const updateQueryParams = (state: SearchState) => {
-    console.log(state);
     router.push(
       {
         query: {
